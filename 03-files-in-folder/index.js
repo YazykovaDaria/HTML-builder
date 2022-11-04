@@ -13,7 +13,7 @@ const showFileData = async(folderName) => {
         const fileExt = path.extname(pathToItem);
         const fileName = path.basename(pathToItem, fileExt);
         const fileSize = itemStat.size;
-        const fileData = `${fileName} - ${fileExt.slice(1)} - ${fileSize}`;
+        const fileData = `${fileName} - ${fileExt.slice(1)} - ${fileSize}b`;
         console.log(fileData);
       }
     });
