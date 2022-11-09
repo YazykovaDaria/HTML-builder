@@ -32,7 +32,7 @@ const copyAssets = async(pathToSourse, pathToResultDir) => {
     const pathToItem = path.join(pathToSourse, item);
     const itemStat = await stat(pathToItem);
     const pathToCopyItem = path.join(pathToResultDir, item);
-
+//некорректно копируются фотки и шрифт!
     if(itemStat.isFile()) {
       const read = createReadStream(pathToItem, 'utf-8');
       const write = createWriteStream(pathToCopyItem);
